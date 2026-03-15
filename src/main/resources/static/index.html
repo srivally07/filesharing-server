@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Secure File Sharing</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Secure File Sharing</h1>
+
+    <div class="upload-card">
+
+        <input type="file" id="fileInput">
+
+        <div class="row">
+
+            <div class="input-group">
+                <label>Download Limit</label>
+                <input type="number" id="limit" value="3" min="1" max="20">
+            </div>
+
+            <div class="input-group">
+                <label>Expiry (hours)</label>
+                <input type="number" id="expiry" value="12" min="1" max="24">
+            </div>
+
+        </div>
+
+        <button onclick="uploadFile()">Upload File</button>
+
+        <p id="status"></p>
+
+        <div id="linkBox" class="hidden">
+
+            <p>Your Download Link</p>
+
+            <input type="text" id="downloadLink" readonly>
+
+            <button onclick="copyLink()">Copy Link</button>
+            <p id="copyMessage"></p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="upload.js"></script>
+
+</body>
+</html>
